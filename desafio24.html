@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversor de temperatura</title>
+  </head>
+  <body>
+    <div class="container">
+      <input type="number" placeholder="Temperatura em celsius" id="c_temp" />
+      <select id="temp_convert">
+        <option value="c_k">Converter para Kelvin</option>
+        <option value="c_c">Converter para Farhrenheit</option>
+      </select>
+
+      <input type="submit" value="converter" id="Convert" onclick="converter_temp()"/>
+
+      <div id="result"></div>
+    </div>
+
+    <script>
+      function converter_temp() {
+        let celsius = (document.getElementById("c_temp").value);
+        let temp_c = (document.getElementById("temp_convert").value);
+        let result;
+
+        switch (temp_c) {
+          case "c_k":
+            result = `<p>${(celsius + 273, 15)} kelvin</p>`;
+            break;
+
+          default:
+            result = `<p>${(celsius * 9) / 5 + 32} fahrenheit</p>`;
+        }
+        div.innerHTML = result
+        // utilizei o console.log para ver se o código funcioina e aparentemente ele faz o cálculo correto, porém estou com dificuldades em criar elementos no js e também em pegar elementos pelo ID e colocar da forma correta no js para que eles apareçam no meu programinha
+
+        // console.log(result); <---
+    }
+    </script>
+  </body>
+</html>
